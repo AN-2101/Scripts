@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+file=$(cat $1)
+
+for line in $file 
+do
+	yt-dlp -x --audio-format mp3 "$line\n" &
+done 
